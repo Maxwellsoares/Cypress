@@ -1,33 +1,35 @@
-Desafio de Automacao de Testes - QA
-Este repositorio contem a solucao para o desafio tecnico de QA, abrangendo a automacao de testes E2E (Interface) e API (Backend), alem da documentacao estrategica do projeto.
+Aqui está o texto corrigido. Foquei em ajustar a acentuação (como em "Automação", "Programação" e "Gráfica") e concordância, mantendo o tom profissional que você estabeleceu.
 
-* Plano de teste dos cenários se encontram na pasta "docs" *
+Desafio de Automação de Testes - QA
+Este repositório contém a solução para o desafio técnico de QA, abrangendo a automação de testes E2E (Interface) e API (Backend), além da documentação estratégica do projeto.
+
+* O Plano de Testes dos cenários encontra-se na pasta "docs" *
 
 Tecnologias Utilizadas
-Cypress (Framework de automacao)
+Cypress (Framework de automação)
 
-JavaScript (Linguagem de programacao)
+JavaScript (Linguagem de programação)
 
-Gherkin/BDD (Documentacao de cenarios)
+Gherkin/BDD (Documentação de cenários)
 
-Pre-requisitos
-Antes de executar os testes, certifique-se de que o ambiente do desafio (Docker) esta rodando:
+Pré-requisitos
+Antes de executar os testes, certifique-se de que o ambiente do desafio (Docker) está rodando:
 
 Acesse a pasta raiz do projeto via terminal.
 
 Execute o comando: docker-compose up --build -d
 
-O Frontend estara disponivel em: http://localhost:5400
+O Frontend estará disponível em: http://localhost:5400
 
-O Backend estara disponivel em: http://localhost:8400
+O Backend estará disponível em: http://localhost:8400
 
-Instalacao das Dependencias
-Apos clonar este repositorio, execute o comando abaixo na pasta raiz para instalar o Cypress e suas dependencias:
+Instalação das Dependências
+Após clonar este repositório, execute o comando abaixo na pasta raiz para instalar o Cypress e suas dependências:
 
 npm install
 
 Como Executar os Testes
-1. Modo Interativo (Interface Grafica)
+1. Modo Interativo (Interface Gráfica)
 Para abrir o Cypress e escolher qual teste rodar visualmente:
 
 npx cypress open
@@ -35,14 +37,17 @@ npx cypress open
 Ao abrir a janela, selecione "E2E Testing", escolha o navegador (Chrome/Electron) e clique no arquivo de teste desejado.
 
 2. Modo Headless (Terminal)
-Para rodar todos os testes de uma vez e gerar o relatorio no terminal:
+Para rodar todos os testes de uma vez e gerar o relatório no terminal:
 
 npx cypress run
 
-# Organizacao do Projeto
-- cypress/e2e/api-users.cy.js: Testes de contrato e logica da API de Usuarios.
-- cypress/e2e/api-company.cy.js: Testes de contrato da API de Empresas.
-- cypress/e2e/e2e-user-flow.cy.js: Fluxo principal de usuario via Frontend.
-- docs/PLANO_DE_TESTES.md: Mapeamento dos cenarios em BDD.
+Organização do Projeto
+cypress/e2e/api-users.cy.js: Testes de contrato e lógica da API de Usuários.
 
-- docs/RELATORIO_DE_BUGS.md: Detalhamento das falhas encontradas durante os testes.
+cypress/e2e/api-company.cy.js: Testes de contrato da API de Empresas.
+
+cypress/e2e/e2e-user-flow.cy.js: Fluxo principal de usuário via Frontend.
+
+docs/PLANO_DE_TESTES.md: Mapeamento dos cenários em BDD.
+
+docs/RELATORIO_DE_BUGS.md: Detalhamento das falhas encontradas durante os testes.
