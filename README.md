@@ -1,6 +1,8 @@
 Desafio de Automacao de Testes - QA
 Este repositorio contem a solucao para o desafio tecnico de QA, abrangendo a automacao de testes E2E (Interface) e API (Backend), alem da documentacao estrategica do projeto.
 
+* Plano de teste dos cenários se encontram na pasta "docs" *
+
 Tecnologias Utilizadas
 Cypress (Framework de automacao)
 
@@ -42,4 +44,5 @@ npx cypress run
 - cypress/e2e/api-company.cy.js: Testes de contrato da API de Empresas.
 - cypress/e2e/e2e-user-flow.cy.js: Fluxo principal de usuario via Frontend.
 - docs/PLANO_DE_TESTES.md: Mapeamento dos cenarios em BDD.
+
 - docs/RELATORIO_DE_BUGS.md: Detalhamento das falhas encontradas durante os testes.
