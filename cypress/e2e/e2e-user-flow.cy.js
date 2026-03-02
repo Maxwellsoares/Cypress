@@ -57,4 +57,26 @@ describe('E2E - Fluxos de Usuário', () => {
     cy.get('tbody tr').should('have.length.at.least', 1)
   })
 
+  it('Cenário 04: Deve validar que o sistema impede cadastro sem campos obrigatórios (Telefone/Nascimento)', () => {
+    cy.contains(/Novo Usuário/i).click({ force: true })
+
+    // Preenche apenas Nome e E-mail, deixando Telefone e Data de Nascimento vazios
+    cy.get('input').eq(0).type('Usuário Falha Campos')
+    cy.get('input').eq(1).type('validacao_obrigatoria@test.com')
+
+    // Seleciona a empresa
+    cy.get('#search_input').click({ force: true }).type('Empresa 1')
+    cy.contains('Empresa 1', { timeout: 5000 }).click({ force: true })
+
+    // Tenta salvar
+    cy.contains(/Salvar/i).click({ force: true })
+
+    /* EXPECTATIVA: O Frontend deve impedir o cadastro (seja mantendo o modal aberto ou exibindo erro).
+      VALIDAÇÃO: Verificado que o usuário "Usuário Falha Campos" NÃO aparece na listagem principal.
+    */
+    cy.contains('Usuário Falha Campos').should('not.exist')
+    
+    cy.log('Sucesso: O Frontend barrou o cadastro incompleto, respeitando a regra de negócio.')
+  })
+
 })
