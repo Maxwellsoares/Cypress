@@ -30,6 +30,7 @@ Então uma tabela com a listagem de usuários deve estar visível
 E deve conter pelo menos um registro de usuário cadastrado
 
 Cenário 04: Impedir cadastro sem campos obrigatórios (Telefone/Nascimento)
+
 Dado que preencho apenas Nome, E-mail e Empresa, omitindo Telefone e Data de Nascimento
 Quando clico em "Salvar"
 Então o sistema deve impedir o cadastro e o novo usuário não deve constar na listagem.
@@ -103,6 +104,7 @@ Dado que possuo o ID de uma empresa previamente cadastrada
 Quando envio uma requisição DELETE para o endpoint /api/company/{id}/delete
 Então o status code da resposta deve ser 200 (OK) 
 E a empresa não deve mais constar na base de dados.
+
 
 
 
