@@ -21,12 +21,7 @@ Comportamento Atual: O sistema não reconhece o campo com hífen, aceitando apen
 Impacto: Médio. Divergência entre a documentação técnica (Seção 5) e a implementação real.
 
 
-# BUG 04 - Falha na Validação de Campos Obrigatórios
-Regra de Negócio: Nome, Email, Telefone, Data de Nascimento e Empresa devem ser obrigatórios.
-Problema: A API e o Frontend permitem a criação de registros omitindo Telefone e Data de Nascimento.
-Impacto: Alto. Quebra de integridade dos dados e da regra de negócio estabelecida.
-#Lógica do Bug#
-Se o requisito diz que Telefone e Nascimento são obrigatórios...
-...e o teste enviou o JSON sem esses campos
-...e o sistema retornou 200 OK (criou o usuário)
-Conclusão: O sistema tem um bug de validação, pois ele deveria ter retornado um erro (400 Bad Request) avisando que faltavam campos obrigatórios.
+# Bug 04 - Falha de Validação de Campos Obrigatórios (Backend vs Frontend)
+Comportamento no Frontend (Cenário E2E 04): O teste passou com sucesso pois confirmou que o sistema impede o cadastro quando campos obrigatórios (Telefone e Nascimento) estão ausentes. O sistema exibe a mensagem de alerta esperada e não insere o registro na listagem.
+Comportamento no Backend (Teste de API): O sistema apresenta uma falha de segurança/consistência, permitindo a criação do usuário via requisição direta (POST) mesmo sem os campos obrigatórios.
+Conclusão: Existe uma validação apenas no "cliente" (Front), mas o "servidor" (Back) está vulnerável, o que permite a entrada de lixo eletrônico no banco de dados via API.
