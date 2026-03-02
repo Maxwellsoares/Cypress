@@ -1,7 +1,7 @@
 Desafio de Automação de Testes - QA Este repositório contém a solução para o desafio técnico de QA, abrangendo a automação de testes E2E (Interface) e API (Backend), além da documentação estratégica do projeto.
 
-O Plano de Testes dos cenários encontra-se na pasta "docs" *
-Tecnologias Utilizadas Cypress (Framework de automação)
+O Plano de Testes dos cenários encontra-se na pasta * "docs" *
+Tecnologias Utilizadas: Cypress (Framework de automação)
 
 JavaScript (Linguagem de programação)
 
@@ -17,11 +17,13 @@ O Frontend estará disponível em: http://localhost:5400
 
 O Backend estará disponível em: http://localhost:8400
 
-Instalação das Dependências Após clonar este repositório, execute o comando abaixo na pasta raiz para instalar o Cypress e suas dependências:
+Instalação das Dependências:
+
+Após clonar este repositório, execute o comando abaixo na pasta raiz para instalar o Cypress e suas dependências:
 
 npm install
 
-Como Executar os Testes
+Como Executar os Testes:
 
 Modo Interativo (Interface Gráfica) Para abrir o Cypress e escolher qual teste rodar visualmente:
 npx cypress open
