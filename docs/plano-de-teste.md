@@ -104,3 +104,4 @@ Quando envio uma requisição DELETE para o endpoint /api/company/{id}/delete
 Então o status code da resposta deve ser 200 (OK) 
 E a empresa não deve mais constar na base de dados.
 
+
