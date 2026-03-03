@@ -25,3 +25,9 @@ Impacto: Médio. Divergência entre a documentação técnica (Seção 5) e a im
 Comportamento no Frontend (Cenário E2E 04): O teste passou com sucesso pois confirmou que o sistema impede o cadastro quando campos obrigatórios (Telefone e Nascimento) estão ausentes. O sistema exibe a mensagem de alerta esperada e não insere o registro na listagem.
 Comportamento no Backend (Teste de API): O sistema apresenta uma falha de segurança/consistência, permitindo a criação do usuário via requisição direta (POST) mesmo sem os campos obrigatórios.
 Conclusão: Existe uma validação apenas no "cliente" (Front), mas o "servidor" (Back) está vulnerável, o que permite a entrada de lixo eletrônico no banco de dados via API.
+
+
+
+*Obs:
+Cenário 02
+Durante os testes E2E, identifiquei que o sistema redireciona o usuário para a home ao exibir alertas de validação no cadastro, causando a perda dos dados preenchidos. Embora o teste tenha passado (o alerta apareceu), registrei isso como uma falha de Usabilidade/UX no Plano de Testes.
