@@ -6,6 +6,14 @@ Os testes implementados cobrem fluxos críticos da aplicação no frontend, bem 
 
 A documentação dos cenários mapeados e os bugs identificados durante a execução dos testes estão disponíveis na pasta `docs/`.
 
+## Pré-requisitos
+
+- Node.js 18+
+- Docker
+- Docker Compose
+
+- Certifique-se de que o backend esteja acessível em http://localhost:8400 antes de executar os testes.
+
 ---
 
 ## Stack Utilizada
